@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block  main %}
+
+    <h1>{{producto}}</h1>
+
+    <form action="modificar" method="POST">
+<!--        <div class="mb-3">-->
+<!--            <label class="form-label">Indentificador único</label>-->
+<!--            <input type="text" class="form-control" name="id">-->
+<!--        </div>-->
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Categoria</label>
+            <input type="text" class="form-control" name="categoria">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Codigo</label>
+            <input type="text" class="form-control" name="codigo">
+        </div>
+        <button type="submit" class="btn btn-primary" name="id" value="{{producto}}">Submit</button>
+        
+    </form>
+{% endblock %}

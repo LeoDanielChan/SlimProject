@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+
+{% block  main %}
+
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">categoria</th>
+                <th scope="col">Código</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in productos%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.nombre}}</td>
+                <td>{{i.descripcion}}</td>
+                <td>{{i.categoria}}</td>
+                <td>{{i.codigo}}</td>
+                <td>
+                    <form action="eliminar" method="POST">
+                        <button value="{{i.id}}" name="id" class="btn btn-danger">Eliminar</button>
+                    </form>
+                    <form action="actualProduc" method="post">
+                        <button value="{{i.id}}" name="id" class="btn btn-primary">Actualizar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

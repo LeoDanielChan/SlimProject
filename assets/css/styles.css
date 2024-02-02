@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #ff0000;
+    color: white;
+}
+
+header{
+    background: pink;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+
+}
+
+header h1{
+    margin: 0;
+}
+
+header nav a.actual {
+    color: brown;
+    background: pink;
+
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    border: 1px solid white;
+}
